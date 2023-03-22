@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: "Montserrat";
+}
+
+.header-inner-div {
+    padding-bottom: 10rem !important;
+}
+
+
+#randomUserDisplaySection {
+    margin-top: -12rem;
+}
+
+.user-rounded-image {
+    border-radius: 100%;
+    margin-bottom: -4rem;
+    border: 4px solid gainsboro;
+}
+
+
+#displayUserInfo {
+    vertical-align: middle;
+}
+
+
+a {
+	text-decoration: none;
+}
+body
+{
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	background-size: 100%;
+}
+.menu-bar /*vertically displayed*/
+{
+	background:black;
+}
+h3
+{
+	color:#990000;
+	margin-bottom: 20px;
+}
+.menu-bar ul /*horizontally displayed as a navigation bar in the same line*/
+{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+	
+	z-index: +1;
+}
+@media (max-width: 800px) {
+	.menu-bar ul {
+		display: block !important;
+	}
+	.menu-bar ul li
+	{
+		width:100% !important;
+		justify-content: center;
+	}
+}
+.menu-bar ul li
+{
+	display: flex;
+	width:150px;
+	margin:10px;
+	padding:15px;
+	
+	justify-content: center;
+	z-index: +1;
+}
+.menu-bar ul li a /*the anchor tag's hyperlinks are displayed as normal text in white colour*/
+{
+	text-decoration: none;
+	color: #fff;
+}
+.menu-bar ul li:hover /*changes background colour of each block when that particular option of menu-bar is hovered upon*/
+{
+	background-color: #cc0000;
+	border-radius: 2px;
+}
+.sub-menu-1 /*sub-menu-1 is hidden until the cursor is placed on the menu-bar option containing it*/
+{
+	display: none;
+	
+	z-index: +1;
+}
+.menu-bar ul li:hover .sub-menu-1 /*displays the sub-menu-1 when the menu-bar option containing a sublist is hovered upon*/
+{
+	display: block;
+	position: absolute;
+	background: #990000;
+	margin-top: 15px;
+	margin-left: -35px;
+	
+	z-index: +1;
+}
+.menu-bar ul li:hover .sub-menu-1 ul /*the options of the sub-menu-1 are displayed in vertical blocks*/
+{
+	display: block;
+	margin: 10px;
+	
+	z-index: +1;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li/*options of the sub-menu-1 are separated with dotted lines*/
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 2px dotted #fff;
+	background: transparent;
+	border-radius: 0px;
+	text-align: left;
+	
+	z-index: +1;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child /*dotted line is removed for the last option*/
+{
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover /*displays the sub-menu-2 when the sub-menu-1 option containing a sublist is hovered upon*/
+{
+	color: #222;
+}
+.sub-menu-2 /*sub-menu-2 is hidden until the cursor is placed on the sub-menu-1 option containing it*/
+{
+	display: none;
+	border-radius: 2px;
+}
+.hover-me:hover .sub-menu-2 /*the options of the sub-menu-2 are displayed in vertical blocks*/
+{
+	position: absolute;
+	display: block;
+	margin-top: 12px;
+	margin-left: 20px;
+	background: #cc0000;
+}
+.logo-img
+{
+	width: 60px;
+}
+.logo
+{
+	display: flex;
+	margin-top: 40px !important;
+	padding: 10px !important;
+	width: 300px !important;
+}
+.logo-txt
+{
+	margin-left: 10px;
+}			

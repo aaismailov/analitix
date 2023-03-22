@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AnalitixMusic</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styleUser.css" rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>	
+		
+		<script type="text/javascript" src="../libs/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../dist/js/jquery.sliderPro.min.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/cdf319e764.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scriptUser.js"></script>
+	</head>
+	
+	<body>
+		
+		<div class="menu-bar">
+			<ul>
+				<a href="./home.html">
+					<li class="logo">
+						<img class="logo-img" src="Logo.jpg"></img>
+						<h2 class="logo-txt">Analitix Music</h2>
+					</li>
+				</a>
+			</ul>
+			<ul>
+				<li><a href="./video.html">ВИДЕО</a></li>
+				<li><a href="./reviews.html">РЕЦЕНЗИИ</a>
+					<div class="sub-menu-1">
+						<ul>
+							<li class="hover-me"><a href="#">РОК</a>
+								<div class="sub-menu-2">
+									<ul>
+										<li><a href="#">ХАРД-РОК</a></li>
+										<li><a href="#">ХЭВИ-МЕТАЛ</a></li>
+										<li><a href="#">ПАНК-РОК</a></li>
+										<li><a href="#">АЛЬТЕРНАТИВНЫЙ</a></li>
+										<li><a href="#">ГРАНЖ-РОК</a></li>
+										<li><a href="#">ИНДИ-РОК</a></li>
+										<li><a href="#">ФОЛК-РОК</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="hover-me"><a href="#">ХИП-ХОП</a>
+								<div class="sub-menu-2">
+									<ul>
+										<li><a href="#">АЛЬТЕРНАТИВНЫЙ</a></li>
+										<li><a href="#">ГАНГСТА-РЭП</a></li>
+										<li><a href="#">ДЖИ-ФАНК</a></li>
+										<li><a href="#">ЛАТИНСКИЙ</a></li>
+										<li><a href="#">ДРИЛЛ</a></li>
+										<li><a href="#">ПОП-РЭП</a></li>
+										<li><a href="#">ТРЭП</a></li>
+										<li><a href="#">ДЖАЗ-РЭП</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="hover-me"><a href="#">ПОП</a>
+								<div class="sub-menu-2">
+									<ul>
+										<li><a href="#">ДАНС-ПОП</a></li>
+										<li><a href="#">СИНТИ-ПОП</a></li>
+										<li><a href="#">ПРОГРЕССИВНЫЙ</a></li>
+										<li><a href="#">K-POP</a></li>
+										<li><a href="#">ЛАТИНСКИЙ</a></li>
+										<li><a href="#">ДИСКО</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="hover-me"><a href="#">ОСТАЛЬНЫЕ</a>
+								<div class="sub-menu-2">
+									<ul>
+										<li><a href="#">ИНДИ</a></li>
+										<li><a href="#">ФОЛК</a></li>
+										<li><a href="#">ДЖАЗ</a></li>
+										<li><a href="#">БЛЮЗ</a></li>
+										<li><a href="#">РИТМ-Н-БЛЮЗ</a></li>
+										<li><a href="#">ЭЛЕКТРОННАЯ</a></li>
+										<li><a href="#">КАНТРИ</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="./author.html">СТАТЬ АВТОРОМ</a></li>
+				<li><a href="./contacts.html">КОНТАКТЫ</a></li>
+				<li><a href="./about.html">О НАС</a></li>
+			</ul>
+		</div>
+
+
+    <header class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="header-inner-div col-md-12 text-center pb-5">
+                    <h2 class="fs-1 fw-normal text-uppercase">Random User Generator</h2>
+                    <p class="fw-lighter">Random user generator is a practice project made by random user api and
+                        bootstrap 5. By this website you can<br> generate a random person info and use anywhere.</p>
+                    <button type="button" class="btn btn-primary py-3 px-5 rounded-2 fw-semibold"
+                        onclick="getNewUserInfo()">Generate New User</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" id="randomUserDisplaySection">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-header pt-5 shadow-sm">
+                            <img src="" class="user-rounded-image img-fluid" id="displayUserPhoto">
+                        </div>
+                        <div class="card-body mb-4 mt-5">
+                            <h3 class="card-title pt-2 fs-2" id="displayUserName"></h3>
+                            <table class="table table-bordered mt-4">
+                                <tbody class="text-start" id="displayUserInfo">
+                                    <tr class="">
+                                        <td class="col-1 text-center"><i class="fa-solid fa-user fs-4 text-muted"></i>
+                                        </td>
+                                        <th scope="col-2">Full Name: </th>
+                                        <td class="col-6" id="displayUserFullName"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserFullName"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i
+                                                class="fa-solid fa-envelope fs-4 text-muted"></i></td>
+                                        <th scope="col-2">Email Address: </th>
+                                        <td class="col-6" id="displayUserEmail"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserEmail"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i class="fa-solid fa-phone fs-4 text-muted"></i>
+                                        </td>
+                                        <th scope="col-2">Phone Number: </th>
+                                        <td class="col-6" id="displayUserPhoneNumber"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserPhoneNumber"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i class="fa-solid fa-user fs-4 text-muted"></i>
+                                        </td>
+                                        <th scope="col-2">Gander: </th>
+                                        <td class="col-6 text-capitalize" id="displayUserGander"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserGander"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i
+                                                class="fa-regular fa-calendar fs-4 text-muted"></i></td>
+                                        <th scope="col-2">Date of Birth: </th>
+                                        <td class="col-6" id="displayUserDOB"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserDOB"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i
+                                                class="fa-solid fa-location-dot fs-4 text-muted"></i></td>
+                                        <th scope="col-2">Address: </th>
+                                        <td class="col-6" id="displayUserAddress"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserAddress"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i
+                                                class="fa-solid fa-map-location-dot fs-4 text-muted"></i></td>
+                                        <th scope="col-2">Post Code: </th>
+                                        <td class="col-6" id="displayUserPostcode"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserPostcode"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1 text-center"><i
+                                                class="fa-solid fa-id-card fs-4 text-muted"></i></td>
+                                        <th scope="col-2">SSN Number: </th>
+                                        <td class="col-6" id="displayUserSSNNumber"></td>
+                                        <td class="col-2 text-center"><button type="button"
+                                                class="btn btn-outline-secondary" id="copyUserSSNNumber"><i
+                                                    class="fa-regular fa-clipboard me-2"></i>Copy</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-primary py-3 px-5 mt-3 rounded-2 fw-semibold"
+                                onclick="getNewUserInfo()">Generate New User</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-5">
+        <p class="text-white text-center mb-0">Copyright @ 2022. All Right Reserved Developed by Ismailov&Yakupov
+    </footer>
+
+
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="copiedToClipboardToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto text-success"><i class="fa-regular fa-clipboard me-2"></i>Copied to clipboard!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-secondary fw-normal" id="copiedToClipboardMessage">
+                <!-- Here will load dynamic toast message... -->>
+            </div>
+        </div>
+    </div>
+	</body>
+</html>
