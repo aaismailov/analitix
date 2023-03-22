@@ -1,0 +1,11 @@
+canvas {
+	display: block;
+	
+  max-width: calc( 50vw - 50px);
+}
+
+@media (max-width: 800px) {
+	canvas {
+		max-width: calc( 100vw - 100px)
+	}
+}
