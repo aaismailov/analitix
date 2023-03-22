@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="./styleContacts.css">
 
 	<script src="https://unpkg.com/brain.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 	
@@ -93,7 +94,16 @@
 				</div>
 			</li>
 			<li><a href="./author.html">АВТОРСТВО</a></li>
-			<li><a href="./contacts.html">КОНТАКТЫ</a></li>
+			<li>
+				<a href="./contacts.html">КОНТАКТЫ</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li class="hover-me">
+							<a href="./user.html">ГЕНЕРАТОР</a>
+						</li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="./about.html">О НАС</a></li>
 		</ul>
 	</div>
@@ -236,12 +246,9 @@
 	</div>
 
 
-	<div class="footer">
-		<p class="left_footer">Copyright © 2022 Исмаилов Асад</p>
-		<div class="right_footer">
-			<p>aaismailov@miem.hse.ru</p>
-		</div>
-	</div>
+	<footer class="bg-dark py-5">
+		<p class="text-white text-center mb-0">Copyright @ 2023. All Right Reserved Developed by Ismailov&Yakupov</p>
+	</footer>
 
 
 
@@ -269,12 +276,12 @@
 			];
 			net.train(data);
 			document.getElementById("predict1").innerHTML = Math.round(net.run([0, 1, 0, 0]) * 100) + "%";
-            document.getElementById("predict2").innerHTML = Math.round(net.run([1, 0, 0, 0]) * 100) + "%";
-            document.getElementById("predict3").innerHTML = Math.round(net.run([1, 0, 1, 0]) * 100) + "%";
-            document.getElementById("predict4").innerHTML = Math.round(net.run([0, 1, 1, 0]) * 100) + "%";
-            document.getElementById("predict5").innerHTML = Math.round(net.run([0, 0, 0, 1]) * 100) + "%";
-            document.getElementById("predict6").innerHTML = Math.round(net.run([0, 1, 0, 0]) * 100) + "%";
-            document.getElementById("predict7").innerHTML = Math.round(net.run([1, 0, 0, 0]) * 100) + "%";
+			document.getElementById("predict2").innerHTML = Math.round(net.run([1, 0, 0, 0]) * 100) + "%";
+			document.getElementById("predict3").innerHTML = Math.round(net.run([1, 0, 1, 0]) * 100) + "%";
+			document.getElementById("predict4").innerHTML = Math.round(net.run([0, 1, 1, 0]) * 100) + "%";
+			document.getElementById("predict5").innerHTML = Math.round(net.run([0, 0, 0, 1]) * 100) + "%";
+			document.getElementById("predict6").innerHTML = Math.round(net.run([0, 1, 0, 0]) * 100) + "%";
+			document.getElementById("predict7").innerHTML = Math.round(net.run([1, 0, 0, 0]) * 100) + "%";
 		}
 
 	</script>

@@ -1,41 +1,44 @@
 <!doctype html>
 
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>AnalitixMusic</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		
-		<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>
-		<link rel="stylesheet" href="./style.css">
-		<link rel="stylesheet" href="./styleContacts.css">
-		<link rel="stylesheet" href="./styleAbout.css">
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-		
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>AnalitixMusic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen" />
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./styleContacts.css">
+	<link rel="stylesheet" href="./styleAbout.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</head>
 	
-	<body>
-		
-		<div class="menu-bar">
-			<ul>
-				<a href="./home.html">
-					<li class="logo">
-						<img class="logo-img" src="Logo.jpg"></img>
-						<h2 class="logo-txt">Analitix Music</h2>
-					</li>
-				</a>
-			</ul>
-			<ul>
-				<li><a href="./video.html">ВИДЕО</a></li>
-				<li><a href="./reviews.html">РЕЦЕНЗИИ</a>
-					<div class="sub-menu-1">
-						<ul>
-							<li class="hover-me"><a href="#">РОК</a>
-								<div class="sub-menu-2">
-									<ul>
-										<li><a href="./hardrock.html">ХАРД-РОК</a></li>
+<body>
+
+	<div class="menu-bar">
+		<ul>
+			<a href="./home.html">
+			<li class="logo">
+				<img class="logo-img" src="Logo.jpg"></img>
+				<h2 class="logo-txt">Analitix Music</h2>
+			</li>
+			</a>
+		</ul>
+		<ul>
+			<li><a href="./video.html">ВИДЕО</a></li>
+			<li>
+				<a href="./reviews.html">РЕЦЕНЗИИ</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li class="hover-me">
+							<a href="#">РОК</a>
+							<div class="sub-menu-2">
+								<ul>
+									<li><a href="./hardrock.html">ХАРД-РОК</a></li>
 									<li><a href="#">ХЭВИ-МЕТАЛ</a></li>
 									<li><a href="#">ПАНК-РОК</a></li>
 									<li><a href="#">ГРАНЖ-РОК</a></li>
@@ -78,155 +81,162 @@
 									<li><a href="#">РИТМ-Н-БЛЮЗ</a></li>
 									<li><a href="#">ЭЛЕКТРОННАЯ</a></li>
 									<li><a href="#">КАНТРИ</a></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li><a href="./author.html">АВТОРСТВО</a></li>
-				<li><a href="./contacts.html">КОНТАКТЫ</a></li>
-				<li><a href="./about.html">О НАС</a></li>
-			</ul>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="./author.html">АВТОРСТВО</a></li>
+			<li>
+				<a href="./contacts.html">КОНТАКТЫ</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li class="hover-me">
+							<a href="./user.html">ГЕНЕРАТОР</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="./about.html">О НАС</a></li>
+		</ul>
+	</div>
+
+
+	<div class="wrapper-links-charts">
+		<div class="column">
+			<canvas id="bar-chart" width="800" height="450"></canvas>
 		</div>
-		
-		
-		<div class="wrapper-links-charts">
-			<div class="column">
-				<canvas id="bar-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="line-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="pie-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="radar-chart" width="800" height="600"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="polar-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="doughnut-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="bar-chart-grouped" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="mixed-chart" width="800" height="450"></canvas>
-			</div>
-			<div class="column">
-				<canvas id="bubble-chart" width="800" height="800"></canvas>
-			</div>
+		<div class="column">
+			<canvas id="line-chart" width="800" height="450"></canvas>
 		</div>
-		
-		<div class="footer">
-			<p class="left_footer">Copyright © 2022 Исмаилов Асад</p>
-			<div class="right_footer">
-				<p>aaismailov@miem.hse.ru</p>
-			</div>
+		<div class="column">
+			<canvas id="pie-chart" width="800" height="450"></canvas>
 		</div>
-		
-		<script type="text/javascript">
-			
-			new Chart(document.getElementById("bar-chart"), {
-				type: 'bar',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [
+		<div class="column">
+			<canvas id="radar-chart" width="800" height="600"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="polar-chart" width="800" height="450"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="doughnut-chart" width="800" height="450"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="bar-chart-grouped" width="800" height="450"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="mixed-chart" width="800" height="450"></canvas>
+		</div>
+		<div class="column">
+			<canvas id="bubble-chart" width="800" height="800"></canvas>
+		</div>
+	</div>
+
+
+	<footer class="bg-dark py-5">
+		<p class="text-white text-center mb-0">Copyright @ 2023. All Right Reserved Developed by Ismailov&Yakupov</p>
+	</footer>
+
+	<script type="text/javascript">
+
+		new Chart(document.getElementById("bar-chart"), {
+			type: 'bar',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [
 					{
 						label: "Количество, чел",
-						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e22cd","#8e5e22"],
-						data: [96,122,133,445,89, 243, 92]
+						backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e22cd", "#8e5e22"],
+						data: [96, 122, 133, 445, 89, 243, 92]
 					}
-					]
-				},
-				options: {
-					legend: { display: false },
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-					}
+				]
+			},
+			options: {
+				legend: { display: false },
+				title: {
+					display: true,
+					text: 'Количество просмотров'
 				}
-			});
-			
-			new Chart(document.getElementById("line-chart"), {
-				type: 'line',
-				data: {
-					labels: ["11.07","11.08","11.09","11.10","11.11"],
-					datasets: [{ 
-						data: [67, 72, 87, 92, 96],
-						label: "Wasteland",
-						borderColor: "#3e95cd",
-						fill: false
-						}, { 
-						data: [82, 90, 92, 98, 122],
-						label: "Sahbabii",
-						borderColor: "#8e5ea2",
-						fill: false
-						}, { 
-						data: [87, 96, 110, 121, 133],
-						label: "DONDA",
-						borderColor: "#3cba9f",
-						fill: false
-						}, { 
-						data: [104, 132, 145, 224, 445],
-						label: "After Hours",
-						borderColor: "#e8c3b9",
-						fill: false
-						}, { 
-						data: [45, 68, 79, 82, 89],
-						label: "SOAD",
-						borderColor: "#c45850",
-						fill: false
-						}, { 
-						data: [93, 145, 178, 198, 243],
-						label: "Frank Ocean",
-						borderColor: "#3e22cd",
-						fill: false
-						}, {
-						data: [86, 89, 90, 92, 92],
-						label: "WWSD",
-						borderColor: "#8e5e22",
-						fill: false
-					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Количество просмотров по месяцам'
-					}
+			}
+		});
+
+		new Chart(document.getElementById("line-chart"), {
+			type: 'line',
+			data: {
+				labels: ["11.07", "11.08", "11.09", "11.10", "11.11"],
+				datasets: [{
+					data: [67, 72, 87, 92, 96],
+					label: "Wasteland",
+					borderColor: "#3e95cd",
+					fill: false
+				}, {
+					data: [82, 90, 92, 98, 122],
+					label: "Sahbabii",
+					borderColor: "#8e5ea2",
+					fill: false
+				}, {
+					data: [87, 96, 110, 121, 133],
+					label: "DONDA",
+					borderColor: "#3cba9f",
+					fill: false
+				}, {
+					data: [104, 132, 145, 224, 445],
+					label: "After Hours",
+					borderColor: "#e8c3b9",
+					fill: false
+				}, {
+					data: [45, 68, 79, 82, 89],
+					label: "SOAD",
+					borderColor: "#c45850",
+					fill: false
+				}, {
+					data: [93, 145, 178, 198, 243],
+					label: "Frank Ocean",
+					borderColor: "#3e22cd",
+					fill: false
+				}, {
+					data: [86, 89, 90, 92, 92],
+					label: "WWSD",
+					borderColor: "#8e5e22",
+					fill: false
 				}
-			});
-			
-			new Chart(document.getElementById("pie-chart"), {
-				type: 'pie',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [{
-						label: "Количество, чел",
-						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e22cd","#8e5e22"],
-						data: [96,122,133,445,89, 243, 92]
-					}]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Количество просмотров по месяцам'
 				}
-			});
-			
-			new Chart(document.getElementById("radar-chart"), {
-				type: 'radar',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [
+			}
+		});
+
+		new Chart(document.getElementById("pie-chart"), {
+			type: 'pie',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [{
+					label: "Количество, чел",
+					backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e22cd", "#8e5e22"],
+					data: [96, 122, 133, 445, 89, 243, 92]
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Количество просмотров'
+				}
+			}
+		});
+
+		new Chart(document.getElementById("radar-chart"), {
+			type: 'radar',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [
 					{
 						label: "11.07",
 						fill: true,
@@ -234,8 +244,8 @@
 						borderColor: "rgba(179,181,198,1)",
 						pointBorderColor: "#fff",
 						pointBackgroundColor: "rgba(179,181,198,1)",
-						data: [11.88,14.54,15.43,18.44,7.98,16.49,15.25]
-						}, {
+						data: [11.88, 14.54, 15.43, 18.44, 7.98, 16.49, 15.25]
+					}, {
 						label: "11.11",
 						fill: true,
 						backgroundColor: "rgba(255,99,132,0.2)",
@@ -243,145 +253,145 @@
 						pointBorderColor: "#fff",
 						pointBackgroundColor: "rgba(255,99,132,1)",
 						pointBorderColor: "#fff",
-						data: [7.87,10,1.09,36.47,7.29,19.91,7.54]
+						data: [7.87, 10, 1.09, 36.47, 7.29, 19.91, 7.54]
 					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Распределение в % просмотров'
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Распределение в % просмотров'
 				}
-			});
-			new Chart(document.getElementById("polar-chart"), {
-				type: 'polarArea',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [
+			}
+		});
+		new Chart(document.getElementById("polar-chart"), {
+			type: 'polarArea',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [
 					{
 						label: "Количество, чел)",
-						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e22cd","#8e5e22"],
-						data: [96,122,133,445,89, 243, 92]
+						backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e22cd", "#8e5e22"],
+						data: [96, 122, 133, 445, 89, 243, 92]
 					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Количество просмотров'
 				}
-			});
-			new Chart(document.getElementById("doughnut-chart"), {
-				type: 'doughnut',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [
+			}
+		});
+		new Chart(document.getElementById("doughnut-chart"), {
+			type: 'doughnut',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [
 					{
 						label: "Количество, чел)",
-						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e22cd","#8e5e22"],
-						data: [96,122,133,445,89, 243, 92]
+						backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e22cd", "#8e5e22"],
+						data: [96, 122, 133, 445, 89, 243, 92]
 					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Количество просмотров'
 				}
-			});
-			
-			new Chart(document.getElementById("bar-chart-horizontal"), {
-				type: 'horizontalBar',
-				data: {
-					labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
-					datasets: [
+			}
+		});
+
+		new Chart(document.getElementById("bar-chart-horizontal"), {
+			type: 'horizontalBar',
+			data: {
+				labels: ["Wasteland", "Sahbabii", "DONDA", "After Hours", "SOAD", "Frank Ocean", "WWSD"],
+				datasets: [
 					{
 						label: "Количество, чел)",
-						backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e22cd","#8e5e22"],
-						data: [96,122,133,445,89, 243, 92]
+						backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e22cd", "#8e5e22"],
+						data: [96, 122, 133, 445, 89, 243, 92]
 					}
-					]
-				},
-				options: {
-					legend: { display: false },
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-					}
+				]
+			},
+			options: {
+				legend: { display: false },
+				title: {
+					display: true,
+					text: 'Количество просмотров'
 				}
-			});
-			new Chart(document.getElementById("bar-chart-grouped"), {
-				type: 'bar',
-				data: {
-					labels: ["11.07","11.08","11.09","11.10","11.11"],
-					datasets: [
+			}
+		});
+		new Chart(document.getElementById("bar-chart-grouped"), {
+			type: 'bar',
+			data: {
+				labels: ["11.07", "11.08", "11.09", "11.10", "11.11"],
+				datasets: [
 					{
 						label: "Frank Ocean",
 						backgroundColor: "#3e95cd",
 						data: [93, 145, 178, 198, 243]
-						}, {
+					}, {
 						label: "After Hours",
 						backgroundColor: "#8e5ea2",
 						data: [104, 132, 145, 224, 445]
 					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Сравнение просмотров 2 популярных статей'
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Сравнение просмотров 2 популярных статей'
 				}
-			});
-			new Chart(document.getElementById("mixed-chart"), {
-				type: 'bar',
-				data: {
-					labels: ["11.07","11.08","11.09","11.10","11.11"],
-					datasets: [{
-						label: "Frank Ocean",
-						type: "line",
-						borderColor: "#8e5ea2",
-						data: [93, 145, 178, 198, 243],
-						fill: false
-						}, {
-						label: "After Hours",
-						type: "line",
-						borderColor: "#3e95cd",
-						data: [104, 132, 145, 224, 445],
-						fill: false
-						}, {
-						label: "Frank Ocean",
-						type: "bar",
-						backgroundColor: "rgba(0,0,0,0.2)",
-						data: [93, 145, 178, 198, 243],
-						}, {
-						label: "After Hours",
-						type: "bar",
-						backgroundColor: "rgba(0,0,0,0.2)",
-						backgroundColorHover: "#3e95cd",
-						data: [104, 132, 145, 224, 445]
-					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Сравнение просмотров 2 популярных статей'
-					},
-					legend: { display: false }
+			}
+		});
+		new Chart(document.getElementById("mixed-chart"), {
+			type: 'bar',
+			data: {
+				labels: ["11.07", "11.08", "11.09", "11.10", "11.11"],
+				datasets: [{
+					label: "Frank Ocean",
+					type: "line",
+					borderColor: "#8e5ea2",
+					data: [93, 145, 178, 198, 243],
+					fill: false
+				}, {
+					label: "After Hours",
+					type: "line",
+					borderColor: "#3e95cd",
+					data: [104, 132, 145, 224, 445],
+					fill: false
+				}, {
+					label: "Frank Ocean",
+					type: "bar",
+					backgroundColor: "rgba(0,0,0,0.2)",
+					data: [93, 145, 178, 198, 243],
+				}, {
+					label: "After Hours",
+					type: "bar",
+					backgroundColor: "rgba(0,0,0,0.2)",
+					backgroundColorHover: "#3e95cd",
+					data: [104, 132, 145, 224, 445]
 				}
-			});
-			new Chart(document.getElementById("bubble-chart"), {
-				type: 'bubble',
-				data: {
-					labels: "Africa",
-					datasets: [
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Сравнение просмотров 2 популярных статей'
+				},
+				legend: { display: false }
+			}
+		});
+		new Chart(document.getElementById("bubble-chart"), {
+			type: 'bubble',
+			data: {
+				labels: "Africa",
+				datasets: [
 					{
-				
-						
+
+
 						label: ["Wasteland"],
 						backgroundColor: "rgba(255,221,50,0.2)",
 						borderColor: "rgba(255,221,50,1)",
@@ -390,7 +400,7 @@
 							y: 5.245,
 							r: 15
 						}]
-						}, {
+					}, {
 						label: ["Sahbabii"],
 						backgroundColor: "rgba(60,186,159,0.2)",
 						borderColor: "rgba(60,186,159,1)",
@@ -399,7 +409,7 @@
 							y: 7.526,
 							r: 10
 						}]
-						}, {
+					}, {
 						label: ["DONDA"],
 						backgroundColor: "rgba(0,0,0,0.2)",
 						borderColor: "#000",
@@ -408,7 +418,7 @@
 							y: 6.994,
 							r: 15
 						}]
-						}, {
+					}, {
 						label: ["After Hours"],
 						backgroundColor: "rgba(193,46,12,0.2)",
 						borderColor: "rgba(193,46,12,1)",
@@ -418,29 +428,29 @@
 							r: 15
 						}]
 					}
-					]
-				},
-				options: {
-					title: {
-						display: true,
-						text: 'Количество просмотров'
-						}, scales: {
-						yAxes: [{ 
-							scaleLabel: {
-								display: true,
-								labelString: "На постах на канале"
-							}
-						}],
-						xAxes: [{ 
-							scaleLabel: {
-								display: true,
-								labelString: "На статьях"
-							}
-						}]
-					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Количество просмотров'
+				}, scales: {
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: "На постах на канале"
+						}
+					}],
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: "На статьях"
+						}
+					}]
 				}
-			});
-			
-		</script>
-	</body>
+			}
+		});
+
+	</script>
+</body>
 </html>
