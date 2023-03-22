@@ -59,7 +59,7 @@ h3
 .menu-bar ul li:hover /*changes background colour of each block when that particular option of menu-bar is hovered upon*/
 {
 	background-color: #cc0000;
-	border-radius: 2px;
+	border-radius: 5px;
 }
 .sub-menu-1 /*sub-menu-1 is hidden until the cursor is placed on the menu-bar option containing it*/
 {
@@ -72,23 +72,23 @@ h3
 	display: block;
 	position: absolute;
 	background: #990000;
-	margin-top: 15px;
-	margin-left: -35px;
+	margin-top: 20px;
+	margin-left: 200px;
 	
 	z-index: +1;
 }
 .menu-bar ul li:hover .sub-menu-1 ul /*the options of the sub-menu-1 are displayed in vertical blocks*/
 {
 	display: block;
-	margin: 10px;
+	margin: 20px;
 	
 	z-index: +1;
 }
 .menu-bar ul li:hover .sub-menu-1 ul li/*options of the sub-menu-1 are separated with dotted lines*/
 {
-	width: 150px;
+	width: 100px;
 	padding: 10px;
-	border-bottom: 2px dotted #fff;
+	border-bottom: 1px dotted #fff;
 	background: transparent;
 	border-radius: 0px;
 	text-align: left;
@@ -113,12 +113,13 @@ h3
 	position: absolute;
 	display: block;
 	margin-top: 12px;
-	margin-left: 20px;
+	margin-left: 250px;
 	background: #cc0000;
 }
 .logo-img
 {
 	width: 60px;
+	border-radius: 5px;
 }
 .logo
 {
